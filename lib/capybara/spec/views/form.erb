@@ -163,7 +163,47 @@
       <option selected="selected" value="thermal">Long Johns</option>
     </select>
   </p>
- 
+
+  <!-- Begin parameter Soup -->
+  <p>
+    <label for="form_order_number">Order Number</label>
+    <input type="text" maxlength="5" name="form[soup][]" id="form_order_number" value="5"/>
+  </p>
+
+  <p>
+    <label for="form_special_request">Special Request</label></br>
+    <textarea name="form[soup][]" id="form_special_request">Please bow to the soup</textarea>
+  <p>
+
+  <p>
+    <input type="radio" name="form[soup][]" value="gluten-free" id="soup_gluten-free"/>
+    <label for="soup_gluten-free">Gluten Free</label>
+    <input type="radio" name="form[soup][]" value="vegan" id="soup_vegan" checked="checked"/>
+    <label for="soup_vegan">Vegan</label>
+    <input type="radio" name="form[soup][]" value="both" id="soup_both"/>
+    <label for="soup_both">Both</label>
+  </p>
+
+  <p>
+    <input type="checkbox" value="spicy" name="form[soup][]" id="form_soup_spicy" checked="checked"/>
+    <label for="form_soup_spicy">Spicy</label>
+    <input type="checkbox" value="mushrooms" name="form[soup][]" id="form_soup_mushrooms"/>
+    <label for="form_soup_mushrooms">Mushrooms</label>
+    <input type="checkbox" value="bamboo_shoots" name="form[soup][]" id="form_soup_bamboo_shoots" checked="checked"/>
+    <label for="form_soup_bamboo_shoots">Bamboo Shoots</label>
+  </p>
+
+  <p>
+    <label for="form_addon">Pick One</label>
+    <select name="form[soup][]" id="form_soup_addon" multiple="multiple">
+      <option>Rice</option>
+      <option>Vermicelli</option>
+      <option>Soba</option>
+      <option>Udon</option>
+    </select>
+  </p>
+  <!-- End parameter Soup -->
+
   <p>
     <span>First address<span>
     <label for='address1_street'>Street</label>
