@@ -5,7 +5,7 @@ require 'yard'
 desc "Run all examples"
 RSpec::Core::RakeTask.new(:spec) do |t|
   #t.rspec_path = 'bin/rspec'
-  t.rspec_opts = %w[--color]
+  t.rspec_opts = %w[--color] << '--format d'
 end
 
 YARD::Rake::YardocTask.new do |t|

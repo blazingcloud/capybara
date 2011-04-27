@@ -1,3 +1,4 @@
+require 'ruby-debug'
 class Capybara::RackTest::Form < Capybara::RackTest::Node
   # This only needs to inherit from Rack::Test::UploadedFile because Rack::Test checks for
   # the class specifically when determing whether to consturct the request as multipart.
@@ -15,6 +16,7 @@ class Capybara::RackTest::Form < Capybara::RackTest::Node
   end
 
   def params(button)
+    debugger
     params = {}
 
     native.xpath("(.//input|.//select|.//textarea)[not(@disabled)]").map do |field|
@@ -75,6 +77,7 @@ private
   end
 
   def merge_param!(params, key, value)
+    debugger if key == 'form[soup][]'
     Rack::Utils.normalize_params(params, key, value)
   end
 end

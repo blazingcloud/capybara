@@ -1,6 +1,6 @@
 shared_examples_for "multi_params" do
 
-  describe "allows many elements to share the same form name in array style syntax" do
+  describe "allows many elements to share the same form name in array style syntax", :focus => true do
     before do
       @session.visit('/form')
     end
